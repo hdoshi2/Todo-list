@@ -1,0 +1,8 @@
+{
+  "short_name": "My ToDo List",
+  "name": "Create React App Sample",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "grey",
+  "background_color": "grey"
+}
