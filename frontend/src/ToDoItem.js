@@ -26,7 +26,7 @@ class ToDoItem extends Component {
     const { toDoList, updateCheck } = this.props;
     return (
       <div className="todo-list">
-        {toDoList.map(({ id, completed, text }) => {
+        {toDoList.map(({ id, completed, taskName }) => {
           return (
             <div key={id} className="todo-item">
               <input
@@ -35,9 +35,9 @@ class ToDoItem extends Component {
                 checked={completed}
               />
               {completed ? (
-                <div className="completed">{text}</div>
+                <div className="completed">{taskName}</div>
               ) : (
-                <div>{text}</div>
+                <div>{taskName}</div>
               )}
             </div>
           );

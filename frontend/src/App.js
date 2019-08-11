@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import TodoItem from "./ToDoItem";
-import toDo from "./data";
+// import toDo from "./data";
 
 // function App() {
 //   return (
@@ -15,9 +15,15 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      toDoArray: toDo,
-      test: "test"
+      toDoArray: []
     };
+  }
+
+  async componentDidMount() {
+    const response = await fetch("/api/todos");
+    const myJson = await response.json();
+    console.log(myJson);
+    this.setState({ toDoArray: myJson });
   }
 
   updateCheck = id => {
