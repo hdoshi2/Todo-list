@@ -15,7 +15,7 @@
     "nodemon": "^1.19.1",
     "pg": "^7.4.1",
     "pg-hstore": "^2.3.2",
-    "sequelize": "^4.31.2",
+    "sequelize": "^5.15.1",
     "volleyball": "^1.5.1"
   }
 }
